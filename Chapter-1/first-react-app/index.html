@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>My First React Application</title>
+		<script src="//unpkg.com/react@18/umd/react.development.js"></script>
+		<script src="//unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+	</head>
+
+	<body>
+		<div id="root"></div>
+
+		<script type="text/javascript">
+			/*
+			// creating react element 'h1' and storing in variable, react element isn't actual DOM Node
+			// it is intantiation of React 'h1' element or component
+			const reactElement = window.React.createElement(
+				"h1",
+				null,
+				"Hello World!!!"
+			);
+
+			// Getting the div with id 'root'
+			const domNode = document.getElementById("root");
+
+			// creating a React Application Holder (called root) from DOM Element 'domNode'
+			const root = window.ReactDOM.createRoot(domNode);
+
+			// Rendering the React Element 'h1' into the root
+			root.render(reactElement);
+            */
+
+			// Above code in a single statement
+			ReactDOM.createRoot(document.getElementById("root")).render(
+				React.createElement("h1", null, "Hello World!!!")
+			);
+
+			// To run on a local web development server, type in index.html directory "npx serve"
+		</script>
+	</body>
+</html>
