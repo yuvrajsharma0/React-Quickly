@@ -72,6 +72,7 @@ class ShoppingCart extends Component {
     Like using && (AND) or || (OR) as they short-circuit
 */
 
+/*
 class UserName extends Component {
 	render() {
 		return (
@@ -82,6 +83,7 @@ class UserName extends Component {
 		);
 	}
 }
+*/
 
 /* USING OBJECTS FOR SWITCHING
     We can use ternary expression but it will become lengthy, switch case will also be same and also
@@ -130,13 +132,32 @@ class ShoppingCart extends Component {
 			hasCreditCard ? (
 				<Fragment>
 					<button disabled={!hasItems || !isAvailable}>Checkout</button>
-					{hasAddress && }
+					{hasAddress && (
+						<button disabled={!hasItems || !isAvailable}>One-Click Buy</button>
+					)}
 				</Fragment>
 			) : (
 				<button>Add Credit Card</button>
 			)
 		) : (
-			true
+			<Fragment>
+				<button>Login</button>
+				<button disabled={!hasItems || !isAvailable}>Checkout as Guest</button>
+			</Fragment>
 		);
 	}
 }
+
+class App extends Component {
+	render() {
+		const items = [1, 2, 3];
+		// const user = null;
+		// const user = { creditcard: null, address: null };
+		// const user = { creditcard: true, address: null };
+		const user = { creditcard: true, address: true };
+
+		return <ShoppingCart items={items} user={user} />;
+	}
+}
+
+export default App;
