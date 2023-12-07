@@ -1,9 +1,0 @@
-1. False, react is not a complete framework in and of itself. React is a library for Rendering Dynamic UI. For creating application you also need to use other frameworks or libraries with implement other functionality other than react.
-
-2. (c) The Primary problem that react solves is: Rendering dynamic data in UI Layer.
-
-3. (c) ReactDOM.createRoot(...).render() - is the method used for Rendering React Components.
-
-4. No, You can use any backend technology.
-
-5. Yes, React-DOM library is necessary for rendering the React Element on WebPage. 
